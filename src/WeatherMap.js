@@ -21,8 +21,9 @@ const WeatherMap = () => {
     const position = [23.8859, 45.0792]; 
     
     useEffect(() => {
+        
         // Connect to the server using socket.io client
-        const socket = io('http://localhost:8000/weather/live', {
+        const socket = io('https://my-weather-api-8d713ffb699d.herokuapp.com/weather/live', {
             transports: ['websocket'],
         });
         socket.on('connect', () => {
